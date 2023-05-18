@@ -13,6 +13,8 @@ import {
 } from 'amazon-cognito-identity-js';
 import AppConfig from './AppConfig';
 
+import Gater from "./pages/Gater"
+
 class App extends React.Component {
 
     constructor(props) {
@@ -86,6 +88,7 @@ class App extends React.Component {
                     <Repositories default path="/repositories" loggedIn={this.state.loggedIn} guest={this.state.guest} />
                     <Permissions path="/permissions/:repositoryUuid" loggedIn={this.state.loggedIn} />
                     <Permissions path="/permissions" loggedIn={this.state.loggedIn} />
+                    <Gater path="/gater" loggedIn={this.state.loggedIn} element={<Gater />} />
                 </Router>
                 <footer className="copyright">©2020, Laboratory of Systems Pharmacology. All rights reserved.</footer>
             </div>
